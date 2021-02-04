@@ -1,5 +1,7 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import CreateNote from './components/CreateNote';
 import CreateUser from './components/CreateUser';
 import Navigation from './components/Navigation';
