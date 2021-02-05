@@ -1,5 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 
 export default class CreateUser extends Component {
 
@@ -20,16 +22,23 @@ export default class CreateUser extends Component {
         this.setState({ userName: e.target.value })
     }
 
+    buscarUser = (e) => {
+        e.preventDefault()
+    }
+
     render() {
         return (
             <div className="row">
                 <div className="col-md-4">
                     <div className="card card-body">
                         <h3>Create New User</h3>
-                        <form >
+                        <form onSubmit={this.buscarUser}>
                             <div className="form-group">
                                 <input type="text" className="form-control" onChange={this.buscarUser} />
                             </div>
+                            <TextField id="standard-basic" label="Standard" variant="outlined" />
+                            <Button variant="outlined" color="primary" >Buscar</Button>
+                            {/* <button type="submit" className="btn btn-primary">Buscar</button> */}
                         </form>
                     </div>
                 </div>
