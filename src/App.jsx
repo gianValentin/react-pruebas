@@ -6,6 +6,7 @@ import CreateNote from './components/CreateNote.jsx';
 import CreateUser from './components/CreateUser.jsx';
 import Navigation from './components/Navigation.jsx';
 import NoteList from './components/NoteList.jsx';
+import CreateUserShop from "./components/createUserShop";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/edit/:id" component={CreateNote} />
         <Route path="/create" component={CreateNote} />
         <Route path="/user" component={CreateUser} />
+        <Route path="/userShop" component={CreateUserShop} />        
       </div>
 
 

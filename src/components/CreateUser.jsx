@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { Component } from 'react'
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
+import Avatar from "@material-ui/core/Avatar";
+import Grid from "@material-ui/core/Grid";
 
 export default class CreateUser extends Component {
 
@@ -36,8 +38,14 @@ export default class CreateUser extends Component {
                             <div className="form-group">
                                 <input type="text" className="form-control" onChange={this.buscarUser} />
                             </div>
-                            <TextField id="standard-basic" label="Standard" variant="outlined" />
-                            <Button variant="outlined" color="primary" >Buscar</Button>
+                            <Grid container justify="space-between" spacing={1} alignItems="center">
+                                <Grid item xs={8}>
+                                    <TextField id="standard-basic" label="Standard" variant="outlined" size="small"/>
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <Button variant="outlined" color="primary" >Buscar</Button>
+                                </Grid>
+                            </Grid>
                             {/* <button type="submit" className="btn btn-primary">Buscar</button> */}
                         </form>
                     </div>
@@ -47,6 +55,7 @@ export default class CreateUser extends Component {
                         {
                             this.state.users.map((user, i) => (
                                 <li className="list-group-item list-group-item-action" key={i}>
+                                    <Avatar alt={user.name} src={user.image} />
                                     {user.name}
                                 </li>
                             ))
