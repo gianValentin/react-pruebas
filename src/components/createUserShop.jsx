@@ -29,7 +29,7 @@ export default function CreateUserShop() {
 
     const newUserShop = (e) => {
         e.preventDefault()
-        console.log("Gian: ", usuario)        
+        console.log("Gian: ", usuario)
         guardarUsuarioForm()
     }
 
@@ -45,7 +45,12 @@ export default function CreateUserShop() {
                     <form onSubmit={newUserShop}>
                         <Grid container justify="space-between" spacing={1} alignItems="center">
                             <Grid item xs={12}>
-                                <TextField label="Usuario" variant="outlined" size="small" name="usuario" value={usuario.usuario} onChange={textChange} />
+                                <TextField label="Usuario" variant="outlined" size="small"
+                                    name="usuario"
+                                    value={usuario.usuario}
+                                    onChange={textChange}
+                                    validators={['required', 'isEmail']}
+                                    />
                             </Grid>
                             <Grid item xs={12}>
                                 <TextField label="Nombre" variant="outlined" size="small" name="nombre" value={usuario.nombre} onChange={textChange} />
@@ -65,14 +70,14 @@ export default function CreateUserShop() {
             </div>
             <div className="col-md-8">
                 <ul className="list-group">
-                        {
-                            usuarios.map((user, i) => (
-                                <li className="list-group-item list-group-item-action" key={i}>                                    
-                                    {user.usuario} | {user.nombre} | {user.apellidos} | {user.contraseña}
-                                </li>
-                            ))
-                        }
-                    </ul>
+                    {
+                        usuarios.map((user, i) => (
+                            <li className="list-group-item list-group-item-action" key={i}>
+                                {user.usuario} | {user.nombre} | {user.apellidos} | {user.contraseña}
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
         </div >
     )
