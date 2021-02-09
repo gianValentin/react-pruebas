@@ -16,8 +16,7 @@ export default function CreateUserShop() {
 
 
     const listarUsuarios = async () => {
-        const res = await obtenerUsuarios()
-        console.log("Gian; ", res.data)
+        const res = await obtenerUsuarios()        
         setUsuarios(res.data)
     }
 
@@ -28,8 +27,7 @@ export default function CreateUserShop() {
     }
 
     const newUserShop = (e) => {
-        e.preventDefault()
-        console.log("Gian: ", usuario)
+        e.preventDefault()        
         guardarUsuarioForm()
     }
 
