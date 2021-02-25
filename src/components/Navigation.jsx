@@ -18,6 +18,9 @@ export default class Navigation extends Component {
                             </li>
                             <li className="nav-item ">
                                 <Link className="nav-link" to="/crudTodo">Crud Todo</Link>
+                            </li>
+                            <li className="nav-item ">
+                                <Link className="nav-link" to="/clima">Clima</Link>
                             </li>                
                             <li className="nav-item">
                                 <Link className="nav-link" to="/create">Create Note</Link>

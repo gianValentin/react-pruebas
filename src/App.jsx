@@ -8,6 +8,7 @@ import Navigation from './components/Navigation.jsx';
 import NoteList from './components/NoteList.jsx';
 import CreateUserShop from "./components/createUserShop";
 import CrudTodo from "./components/CrudTodo";
+import Clima from "./components/Clima";
 
 function App() {
   return (
@@ -15,12 +16,13 @@ function App() {
       <Navigation />
 
       <div className="container p-4">
-        <Route path="/" component={NoteList} exact />        
+        <Route path="/" component={NoteList} exact />  
+        <Route path="/clima" component={Clima} />      
         <Route path="/edit/:id" component={CreateNote} />
         <Route path="/create" component={CreateNote} />
         <Route path="/user" component={CreateUser} />
         <Route path="/userShop" component={CreateUserShop} />        
-        <Route path="/crudTodo" component={CrudTodo} />
+        <Route path="/crudTodo" component={CrudTodo} />        
       </div>
 
 

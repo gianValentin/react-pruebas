@@ -13,8 +13,6 @@ export default function CreateUserShop() {
 
     const textChange = event => setUsuario({ ...usuario, [event.target.name]: event.target.value });
 
-
-
     const listarUsuarios = async () => {
         const res = await obtenerUsuarios()        
         setUsuarios(res.data)
