@@ -2,12 +2,12 @@ import axios from "axios";
 
 const BUSCAR = "BUSCAR";
 
-const busqueda = (data) => {
+const busqueda = (data) => ({
     type: BUSCAR,
     data
-}
+})
 
-export const busquedaAsc = (nombre) = dispatch => {
+export const busquedaAsc = (nombre) => dispatch => {
 
     const options = {
         method: 'GET',
